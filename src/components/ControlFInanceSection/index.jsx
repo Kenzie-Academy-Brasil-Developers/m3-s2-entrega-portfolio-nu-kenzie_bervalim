@@ -8,13 +8,25 @@ export const ControlFinanceSection = () => {
 
   const addFinanceControlCard = (formData) => {
     const newFinanceControl = { ...formData, id: uuidv4() };
-    console.log(newFinanceControl);
     setFinanceList([...financeList, newFinanceControl]);
+    console.log(newFinanceControl);
   };
+
+  const removeFinanceControlCard = (removeId) => {
+    const filteredFinanceList = financeList.filter(
+      (finance) => finance.id !== removeId
+    );
+    setFinanceList(filteredFinanceList);
+    console.log(filteredFinanceList);
+  };
+
   return (
     <section>
       <FinanceForm addFinanceControlCard={addFinanceControlCard} />
-      <ControlFinanceList financeList={financeList} />
+      <ControlFinanceList
+        financeList={financeList}
+        removeFinanceControlCard={removeFinanceControlCard}
+      />
     </section>
   );
 };

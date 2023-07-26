@@ -2,6 +2,8 @@ export const ControlFinanceCard = ({
   financialDescription,
   typeValue,
   financialValue,
+  removeFinanceControlCard,
+  id,
 }) => {
   return (
     <li>
@@ -16,7 +18,7 @@ export const ControlFinanceCard = ({
             currency: "BRL",
           })}
         </span>
-        <button>Excluir</button>
+        <button onClick={() => removeFinanceControlCard(id)}>Excluir</button>
       </div>
     </li>
   );
