@@ -3,14 +3,15 @@ import { InputDescription } from "../InputDescription";
 import { InputValue } from "../InputValue";
 import { SelectTypeFinance } from "../SelectTypeFinance";
 
-export const FinanceForm = () => {
+export const FinanceForm = ({ addFinanceControlCard }) => {
   const [financialDescription, setFinancialDescription] = useState("");
   const [financialValue, setFinancialValue] = useState("");
   const [typeValue, setTypeValue] = useState("Entrada");
 
   const submitFinancialInfo = (event) => {
     event.preventDefault();
-    console.log({ financialDescription, financialValue, typeValue });
+    addFinanceControlCard({ financialDescription, financialValue, typeValue });
+    // console.log({ financialDescription, financialValue, typeValue });
     setFinancialDescription("");
     setFinancialValue("");
     setTypeValue("Entrada");

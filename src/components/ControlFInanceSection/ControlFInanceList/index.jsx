@@ -1,15 +1,17 @@
 import { ControlFinanceCard } from "./ControlFinanceCard";
 
-export const ControlFinanceList = () => {
+export const ControlFinanceList = ({ financeList }) => {
   return (
     <section>
       <h3>Resumo Financeiro</h3>
       <ul>
-        <ControlFinanceCard
-          financialDescription="Teste"
-          typeValue="Entrada"
-          financialValue={100}
-        />
+        {financeList.map((finance) => (
+          <ControlFinanceCard
+            financialDescription={finance.financialDescription}
+            typeValue={finance.typeValue}
+            financialValue={finance.financialValue}
+          />
+        ))}
       </ul>
     </section>
   );

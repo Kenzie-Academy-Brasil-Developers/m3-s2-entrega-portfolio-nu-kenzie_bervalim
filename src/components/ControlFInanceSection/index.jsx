@@ -3,12 +3,15 @@ import { ControlFinanceList } from "./ControlFInanceList";
 import { useState } from "react";
 
 export const ControlFinanceSection = () => {
-  const [financeList, setNoteList] = useState([]);
+  const [financeList, setFinanceList] = useState([]);
 
+  const addFinanceControlCard = (formData) => {
+    setFinanceList([...financeList, formData]);
+  };
   return (
     <section>
-      <FinanceForm />
-      <ControlFinanceList />
+      <FinanceForm addFinanceControlCard={addFinanceControlCard} />
+      <ControlFinanceList financeList={financeList} />
     </section>
   );
 };
