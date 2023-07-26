@@ -7,6 +7,7 @@ export const ControlFinanceList = ({ financeList }) => {
       <ul>
         {financeList.map((finance) => (
           <ControlFinanceCard
+            key={finance.id}
             financialDescription={finance.financialDescription}
             typeValue={finance.typeValue}
             financialValue={finance.financialValue}
