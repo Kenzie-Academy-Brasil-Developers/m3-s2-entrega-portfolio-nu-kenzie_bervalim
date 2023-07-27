@@ -13,7 +13,12 @@ export const SumControlFinance = ({ financeList }) => {
     <section>
       <div>
         <h3>Valor Total:</h3>
-        <span>{sumFinanceList}</span>
+        <span>
+          {sumFinanceList.toLocaleString("pt-BR", {
+            style: "currency",
+            currency: "BRL",
+          })}
+        </span>
       </div>
       <p>O valor se refere ao saldo</p>
     </section>

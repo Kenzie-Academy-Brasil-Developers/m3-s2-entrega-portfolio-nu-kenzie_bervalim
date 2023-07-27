@@ -13,7 +13,7 @@ export const ControlFinanceCard = ({
       </div>
       <div>
         <span>
-          {financialValue.toLocaleString("pt-BR", {
+          {Number(financialValue).toLocaleString("pt-BR", {
             style: "currency",
             currency: "BRL",
           })}
