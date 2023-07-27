@@ -6,7 +6,7 @@ export const ControlFinanceCard = ({
   id,
 }) => {
   return (
-    <li>
+    <li className={typeValue === "Entrada" ? "green" : "grey"}>
       <div>
         <h3>{financialDescription}</h3>
         <span>{typeValue}</span>
