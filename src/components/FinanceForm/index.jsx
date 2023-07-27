@@ -29,6 +29,7 @@ export const FinanceForm = ({ addFinanceControlCard, financeList }) => {
           setValue={setFinancialDescription}
           required={true}
         />
+        <span>Ex: Compra de roupas</span>
         <InputValue
           label="Valor (R$)"
           placeholder="1"
