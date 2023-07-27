@@ -1,3 +1,5 @@
+import styles from "./style.module.scss";
+
 export const SelectTypeFinance = ({
   children,
   id,
@@ -7,7 +9,7 @@ export const SelectTypeFinance = ({
   required,
 }) => {
   return (
-    <div>
+    <div className={styles.selectBox}>
       <label className="formTypograpy one" htmlFor={id}>
         {label}
       </label>

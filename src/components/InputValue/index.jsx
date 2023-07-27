@@ -1,3 +1,5 @@
+import styles from "./style.module.scss";
+
 export const InputValue = ({
   label,
   id,
@@ -8,7 +10,7 @@ export const InputValue = ({
   required,
 }) => {
   return (
-    <div>
+    <div className={styles.inputBox}>
       <label className="formTypograpy one" htmlFor={id}>
         {label}
       </label>

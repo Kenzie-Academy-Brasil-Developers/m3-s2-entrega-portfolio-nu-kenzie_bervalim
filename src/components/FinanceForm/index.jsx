@@ -22,7 +22,7 @@ export const FinanceForm = ({ addFinanceControlCard, financeList }) => {
       <form onSubmit={submitFinancialInfo}>
         <InputDescription
           label="Descrição"
-          placeholder="Digite aqui  sua descrição"
+          placeholder="Digite aqui sua descrição"
           type="text"
           id="financiaDescription"
           value={financialDescription}

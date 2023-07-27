@@ -20,14 +20,16 @@ export const ControlFinanceSection = () => {
 
   return (
     <section>
-      <FinanceForm
-        financeList={financeList}
-        addFinanceControlCard={addFinanceControlCard}
-      />
-      <ControlFinanceList
-        financeList={financeList}
-        removeFinanceControlCard={removeFinanceControlCard}
-      />
+      <div className="container">
+        <FinanceForm
+          financeList={financeList}
+          addFinanceControlCard={addFinanceControlCard}
+        />
+        <ControlFinanceList
+          financeList={financeList}
+          removeFinanceControlCard={removeFinanceControlCard}
+        />
+      </div>
     </section>
   );
 };
