@@ -1,3 +1,5 @@
+import styles from "./style.module.scss";
+
 export const ControlFinanceCard = ({
   financialDescription,
   typeValue,
@@ -6,18 +8,22 @@ export const ControlFinanceCard = ({
   id,
 }) => {
   return (
-    <li className={typeValue === "Entrada" ? "green" : "grey"}>
+    <li
+      className={`${styles.ControlFinanceCard} ${
+        typeValue === "Entrada" ? styles.green : styles.grey
+      }`}
+    >
       <div>
         <h3 className="title two">{financialDescription}</h3>
         <span className="paragraph brighter">{typeValue}</span>
       </div>
       <div>
-        <span className="paragraph darker">
+        <p className="paragraph darker">
           {Number(financialValue).toLocaleString("pt-BR", {
             style: "currency",
             currency: "BRL",
           })}
-        </span>
+        </p>
         <button
           className="btn deleteCard"
           onClick={() => removeFinanceControlCard(id)}

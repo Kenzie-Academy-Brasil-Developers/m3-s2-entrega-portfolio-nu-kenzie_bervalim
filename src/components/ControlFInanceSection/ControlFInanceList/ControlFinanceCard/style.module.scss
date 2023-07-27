@@ -1,7 +1,33 @@
-.green {
-  border-left: 1px solid green;
-}
+// .green {
+//   border-left: 1px solid green;
+// }
 
-.grey {
-  border-left: 1px solid grey;
+// .grey {
+//   border-left: 1px solid grey;
+// }
+
+.ControlFinanceCard {
+  padding: 1.5rem;
+  background-color: var(--grey-1);
+  border-radius: 4px 0, 0, 4px;
+  border-left: 4px solid;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  h3 {
+    margin-bottom: 1rem;
+  }
+
+  button {
+    margin-top: 1rem;
+  }
+
+  &.green {
+    border-color: var(--color-secondary);
+  }
+
+  &.grey {
+    border-color: var(--grey-2);
+  }
 }
