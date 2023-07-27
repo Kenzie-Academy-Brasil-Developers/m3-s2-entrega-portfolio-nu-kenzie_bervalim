@@ -8,17 +8,22 @@ export const ControlFinanceCard = ({
   return (
     <li className={typeValue === "Entrada" ? "green" : "grey"}>
       <div>
-        <h3>{financialDescription}</h3>
-        <span>{typeValue}</span>
+        <h3 className="title two">{financialDescription}</h3>
+        <span className="paragraph brighter">{typeValue}</span>
       </div>
       <div>
-        <span>
+        <span className="paragraph darker">
           {Number(financialValue).toLocaleString("pt-BR", {
             style: "currency",
             currency: "BRL",
           })}
         </span>
-        <button onClick={() => removeFinanceControlCard(id)}>Excluir</button>
+        <button
+          className="btn deleteCard"
+          onClick={() => removeFinanceControlCard(id)}
+        >
+          Excluir
+        </button>
       </div>
     </li>
   );

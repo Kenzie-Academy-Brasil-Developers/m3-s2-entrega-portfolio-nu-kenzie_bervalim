@@ -9,7 +9,9 @@ export const InputValue = ({
 }) => {
   return (
     <div>
-      <label htmlFor={id}>{label}</label>
+      <label className="formTypograpy one" htmlFor={id}>
+        {label}
+      </label>
       <input
         type={type}
         placeholder={placeholder}

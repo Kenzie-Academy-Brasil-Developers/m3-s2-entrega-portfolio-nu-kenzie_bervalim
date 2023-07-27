@@ -6,7 +6,7 @@ export const ControlFinanceList = ({
 }) => {
   return (
     <section>
-      <h3>Resumo Financeiro</h3>
+      <h3 className="title two">Resumo Financeiro</h3>
       {financeList.length > 0 ? (
         <ul>
           {financeList.map((finance) => (
@@ -21,7 +21,7 @@ export const ControlFinanceList = ({
           ))}
         </ul>
       ) : (
-        <h2>Você ainda não possui nenhum lançamento</h2>
+        <h2 className="title one">Você ainda não possui nenhum lançamento</h2>
       )}
     </section>
   );

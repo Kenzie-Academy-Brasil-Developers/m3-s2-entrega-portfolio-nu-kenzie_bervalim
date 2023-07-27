@@ -8,7 +8,9 @@ export const SelectTypeFinance = ({
 }) => {
   return (
     <div>
-      <label htmlFor={id}>{label}</label>
+      <label className="formTypograpy one" htmlFor={id}>
+        {label}
+      </label>
       <select
         id={id}
         name={id}

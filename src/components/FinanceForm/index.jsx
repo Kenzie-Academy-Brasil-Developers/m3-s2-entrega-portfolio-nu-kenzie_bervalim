@@ -29,7 +29,7 @@ export const FinanceForm = ({ addFinanceControlCard, financeList }) => {
           setValue={setFinancialDescription}
           required={true}
         />
-        <span>Ex: Compra de roupas</span>
+        <span className="formTypograpy one grey">Ex: Compra de roupas</span>
         <InputValue
           label="Valor (R$)"
           placeholder="1"
@@ -49,7 +49,9 @@ export const FinanceForm = ({ addFinanceControlCard, financeList }) => {
           <option value="Entrada">Entrada</option>
           <option value="Despesa">Despesa</option>
         </SelectTypeFinance>
-        <button type="submit">Inserir Valor </button>
+        <button className="btn sendValue fullwidth" type="submit">
+          Inserir Valor
+        </button>
       </form>
       <SumControlFinance financeList={financeList} />
     </>

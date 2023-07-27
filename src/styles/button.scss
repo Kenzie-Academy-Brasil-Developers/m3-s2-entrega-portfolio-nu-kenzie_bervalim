@@ -1,0 +1,43 @@
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  transition: 0.4s;
+
+  &.sendValue {
+    background-color: var(--color-primary);
+    border-radius: 0.5rem;
+    border: 0.125rem solid var(--color-primary);
+    font-family: var(--font-secondary);
+    font-weight: 500;
+    font-size: 1rem;
+    color: #ffffff;
+    height: 3rem;
+    padding: 0 1.4rem;
+  }
+
+  &.fullwidth {
+    width: 100%;
+  }
+  &.sendValue:hover {
+    background-color: var(--color-primary-2);
+    color: var(--grey-1);
+  }
+
+  &.deleteCard {
+    border-radius: 0.125rem;
+    background-color: var(--grey-2);
+    height: 1.1875rem;
+    padding: 0 1rem;
+    font-family: var(--font-primary);
+    font-weight: 400;
+    font-size: 0.625rem;
+    color: var(--grey4);
+  }
+
+  &.deleteCard:hover {
+    background-color: var(--grey4);
+    color: var(--grey-2);
+  }
+}

@@ -11,6 +11,7 @@
   &.two {
     font-size: 1rem;
     color: var(--grey4);
+    line-height: 30px;
   }
 
   &.two.pink {
@@ -23,7 +24,14 @@
   font-size: 0.75rem;
   font-weight: 400;
   line-height: 1.375rem;
-  color: var(--grey4);
+
+  &.brighter {
+    color: var(--grey-5);
+  }
+
+  &.darker {
+    color: var(--grey4);
+  }
 }
 
 .formTypograpy {
