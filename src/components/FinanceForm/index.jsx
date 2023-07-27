@@ -12,7 +12,6 @@ export const FinanceForm = ({ addFinanceControlCard, financeList }) => {
   const submitFinancialInfo = (event) => {
     event.preventDefault();
     addFinanceControlCard({ financialDescription, financialValue, typeValue });
-    // console.log({ financialDescription, financialValue, typeValue });
     setFinancialDescription("");
     setFinancialValue("");
     setTypeValue("Entrada");
@@ -28,6 +27,7 @@ export const FinanceForm = ({ addFinanceControlCard, financeList }) => {
           id="financiaDescription"
           value={financialDescription}
           setValue={setFinancialDescription}
+          required={true}
         />
         <InputValue
           label="Valor (R$)"
@@ -36,12 +36,14 @@ export const FinanceForm = ({ addFinanceControlCard, financeList }) => {
           id="financialValue"
           value={financialValue}
           setValue={setFinancialValue}
+          required={true}
         />
         <SelectTypeFinance
           label="Tipo de valor"
           id="typeValue"
           value={typeValue}
           setValue={setTypeValue}
+          required={true}
         >
           <option value="Entrada">Entrada</option>
           <option value="Despesa">Despesa</option>

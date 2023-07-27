@@ -10,17 +10,21 @@ export const SumControlFinance = ({ financeList }) => {
   }, 0);
 
   return (
-    <section>
-      <div>
-        <h3>Valor Total:</h3>
-        <span>
-          {sumFinanceList.toLocaleString("pt-BR", {
-            style: "currency",
-            currency: "BRL",
-          })}
-        </span>
-      </div>
-      <p>O valor se refere ao saldo</p>
-    </section>
+    <>
+      {financeList.length > 0 ? (
+        <section>
+          <div>
+            <h3>Valor Total:</h3>
+            <span>
+              {sumFinanceList.toLocaleString("pt-BR", {
+                style: "currency",
+                currency: "BRL",
+              })}
+            </span>
+          </div>
+          <p>O valor se refere ao saldo</p>
+        </section>
+      ) : null}
+    </>
   );
 };

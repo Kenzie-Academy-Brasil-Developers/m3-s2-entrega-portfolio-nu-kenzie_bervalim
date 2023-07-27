@@ -5,6 +5,7 @@ export const InputValue = ({
   placeholder,
   value,
   setValue,
+  required,
 }) => {
   return (
     <div>
@@ -16,6 +17,7 @@ export const InputValue = ({
         value={value}
         id={id}
         name={id}
+        required={required}
       />
     </div>
   );

@@ -7,18 +7,22 @@ export const ControlFinanceList = ({
   return (
     <section>
       <h3>Resumo Financeiro</h3>
-      <ul>
-        {financeList.map((finance) => (
-          <ControlFinanceCard
-            key={finance.id}
-            id={finance.id}
-            financialDescription={finance.financialDescription}
-            typeValue={finance.typeValue}
-            financialValue={finance.financialValue}
-            removeFinanceControlCard={removeFinanceControlCard}
-          />
-        ))}
-      </ul>
+      {financeList.length > 0 ? (
+        <ul>
+          {financeList.map((finance) => (
+            <ControlFinanceCard
+              key={finance.id}
+              id={finance.id}
+              financialDescription={finance.financialDescription}
+              typeValue={finance.typeValue}
+              financialValue={finance.financialValue}
+              removeFinanceControlCard={removeFinanceControlCard}
+            />
+          ))}
+        </ul>
+      ) : (
+        <h2>Você ainda não possui nenhum lançamento</h2>
+      )}
     </section>
   );
 };
