@@ -4,6 +4,10 @@
   border: 1px solid var(--grey-2);
   border-radius: 0.25rem;
   grid-area: b;
+
+  @media (min-width: 900px) {
+    width: 22.1875rem;
+  }
 }
 
 .sumBox {
