@@ -1,3 +1,5 @@
+import styles from "./style.module.scss";
+
 export const SumControlFinance = ({ financeList }) => {
   const sumFinanceList = financeList.reduce((prevValue, currentValue) => {
     if (currentValue.typeValue === "Entrada") {
@@ -12,8 +14,8 @@ export const SumControlFinance = ({ financeList }) => {
   return (
     <>
       {financeList.length > 0 ? (
-        <section>
-          <div>
+        <section className={styles.boxSection}>
+          <div className={styles.sumBox}>
             <h3 className="title two">Valor Total:</h3>
             <span className="title two pink">
               {sumFinanceList.toLocaleString("pt-BR", {

@@ -2,6 +2,7 @@ import { FinanceForm } from "../FinanceForm";
 import { ControlFinanceList } from "./ControlFInanceList";
 import { useState } from "react";
 import { v4 as uuidv4 } from "uuid";
+import styles from "./style.module.scss";
 
 export const ControlFinanceSection = () => {
   const [financeList, setFinanceList] = useState([]);
@@ -21,14 +22,16 @@ export const ControlFinanceSection = () => {
   return (
     <section>
       <div className="container">
-        <FinanceForm
-          financeList={financeList}
-          addFinanceControlCard={addFinanceControlCard}
-        />
-        <ControlFinanceList
-          financeList={financeList}
-          removeFinanceControlCard={removeFinanceControlCard}
-        />
+        <div className={styles.flexBox}>
+          <FinanceForm
+            financeList={financeList}
+            addFinanceControlCard={addFinanceControlCard}
+          />
+          <ControlFinanceList
+            financeList={financeList}
+            removeFinanceControlCard={removeFinanceControlCard}
+          />
+        </div>
       </div>
     </section>
   );

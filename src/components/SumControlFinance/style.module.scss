@@ -1,0 +1,12 @@
+.boxSection {
+  margin-top: 13px;
+  padding: 2rem;
+  border: 1px solid var(--grey-2);
+  border-radius: 0.25rem;
+}
+
+.sumBox {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}

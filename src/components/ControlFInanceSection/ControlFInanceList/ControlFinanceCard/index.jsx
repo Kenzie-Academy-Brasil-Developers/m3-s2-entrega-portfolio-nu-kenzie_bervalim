@@ -13,7 +13,7 @@ export const ControlFinanceCard = ({
         typeValue === "Entrada" ? styles.green : styles.grey
       }`}
     >
-      <div>
+      <div className={styles.box}>
         <h3 className="title two">{financialDescription}</h3>
         <span className="paragraph brighter">{typeValue}</span>
       </div>
