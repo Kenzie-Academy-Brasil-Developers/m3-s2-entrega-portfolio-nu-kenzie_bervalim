@@ -1,0 +1,11 @@
+.ControlFinanceList {
+  h3 {
+    margin-bottom: 1.4rem;
+  }
+
+  @media (min-width: 1024px) {
+    li {
+      width: 40rem;
+    }
+  }
+}
