@@ -1,5 +1,6 @@
 import { ControlFinanceCard } from "./ControlFinanceCard";
 import styles from "./style.module.scss";
+
 export const ControlFinanceList = ({
   financeList,
   removeFinanceControlCard,
