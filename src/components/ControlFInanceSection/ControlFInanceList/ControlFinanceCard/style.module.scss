@@ -10,6 +10,7 @@
   align-items: flex-start;
 
   h3 {
+    margin-top: 0.4rem;
     margin-bottom: 1rem;
   }
 
@@ -28,5 +29,11 @@
 
   &.grey {
     border-color: var(--grey-2);
+  }
+}
+
+.box {
+  span {
+    margin-top: 100rem;
   }
 }
