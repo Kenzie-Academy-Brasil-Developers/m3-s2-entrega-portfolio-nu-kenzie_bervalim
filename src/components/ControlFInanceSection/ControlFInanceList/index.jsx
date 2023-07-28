@@ -5,7 +5,7 @@ export const ControlFinanceList = ({
   removeFinanceControlCard,
 }) => {
   return (
-    <section>
+    <section style={{ gridArea: "c" }}>
       <h3 className="title two">Resumo Financeiro</h3>
       {financeList.length > 0 ? (
         <ul>
